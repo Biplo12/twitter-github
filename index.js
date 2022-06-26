@@ -14,9 +14,9 @@ const tweet = async (message) => {
 };
 
 // App runs every day at 12 o'clock
-const job = new cronJob("* * * * *", () => {
-  tweet(`Tweeted ${counter}`);
-  console.log("Tweeted successfully");
-});
+// const job = new cronJob("* * * * *", () => {
+//   tweet(`Tweeted ${counter}`);
+//   console.log("Tweeted successfully");
+// });
 
-job.start();
+// job.start();
