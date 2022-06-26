@@ -37,7 +37,7 @@ const tweet = async () => {
     await rwClient.v1.tweet(
       `On ${date.toLocaleString("en-US", {
         month: "long",
-      })} ${date.getDate()} I commited ${dailyCommitsNumber} times${
+      })} ${date.getDate()} I commited ${dailyCommitsNumber} times.as${
         dailyCommitsNumber === 0 ? " :(" : "!"
       }`
     );
@@ -47,7 +47,7 @@ const tweet = async () => {
 };
 
 // App runs every day at 12 o'clock
-const job = new cronJob("* * * * *", () => {
+const job = new cronJob("0 12 * * *", () => {
   tweet();
 });
 
