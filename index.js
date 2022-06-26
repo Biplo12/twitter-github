@@ -1,4 +1,5 @@
 const rwClient = require("./src/twitterClient.js");
+const cronJob = require("cron").CronJob;
 
 const tweet = async () => {
   try {
@@ -8,4 +9,9 @@ const tweet = async () => {
   }
 };
 
-tweet();
+// App runs every day at 12 o'clock
+const job = new cronJob("1 * * * *", () => {
+  tweet();
+});
+
+job.start();
