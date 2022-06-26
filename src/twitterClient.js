@@ -1,5 +1,5 @@
 const twitterAPI = require("twitter-api-v2").default;
-const dotenv = require("dotenv").config();
+const env = require("dotenv").config();
 
 const client = new twitterAPI({
   appKey: process.env.TWITTER_API_KEY,
