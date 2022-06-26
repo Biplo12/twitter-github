@@ -18,10 +18,10 @@ const tweet = async (message) => {
 //   console.log("Tweeted");
 // });
 
-setInterval(() => {
-  tweet(`Tweeted ${counter}`);
-  console.log("Tweeted successfully");
-}, 5 * 1000);
+// setInterval(() => {
+//   tweet(`Tweeted ${counter}`);
+//   console.log("Tweeted successfully");
+// }, 10 * 1000);
 
 // tweet(counter + 1);
 // job.start();
