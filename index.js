@@ -47,7 +47,7 @@ const tweet = async () => {
 };
 
 // App runs every day at 12 o'clock
-const job = new cronJob("0 12 * * *", () => {
+const job = new cronJob("* * * * *", () => {
   tweet();
 });
 
